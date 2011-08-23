@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>Package Documentation for the PUDL METS API</title>
+   </head>
+   <body>
+      <p style="font-weight: bold">WARNING: There are a handful of elements that are not supported. Unmarshaling and then marshaling a record that contains
+         these elements will result in data loss. See the Javadoc for details.</p>
+      <p>Intends to provide a dependency-free API for creating and manipulating <a href="http://www.loc.gov/standards/mets/">
+            <acronym title="Metadata Encoding and Transmission Schema">METS</acronym>
+         </a> objects. From the METS Schema:</p>
+      <blockquote>
+         <p>A METS document consists of seven possible subsidiary sections: metsHdr (METS document header), dmdSec (descriptive metadata section), amdSec
+            (administrative metadata section), fileGrp (file inventory group), structLink (structural map linking), structMap (structural map) and behaviorSec
+            (behaviors section).</p>
+      </blockquote>
+      <h2>A few notes...</h2>
+      <ul>
+         <li>Creating a new <code>Mets</code> object and writing it out with no further manipulation via <code>MetsWriter</code> will always result in a valid
+            METS record. No more, no less. The only major implication of this is that the list of StructMaps (<code>Metss#structMap</code>) is prepopulated with
+            a single empty Structmap instance.</li>
+         <li>There are no setter methods for repeated elements; they are represented as <code>List</code>s, and are manipulated by getting the List and using
+            its methods.</li>
+      </ul>
+
+      <h2>License</h2>
+      <p>Copyright 2011 Jon Stroop</p>
+
+      <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy
+         of the License at</p>
+
+      <p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+      <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+         WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under
+         the License.</p>
+   </body>
+</html>
